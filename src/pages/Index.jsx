@@ -6,10 +6,10 @@ const gameScenarios = {
   "Prisoner's Dilemma": {
     choices: ["Cooperate", "Defect"],
     outcomes: {
-      "Cooperate,Cooperate": "Both players cooperate and receive a moderate benefit. Reward: 3, 3",
-      "Cooperate,Defect": "You cooperate but the other defects, you get nothing and the other gets maximum benefit. Reward: 0, 5",
-      "Defect,Cooperate": "You defect while the other cooperates, you get maximum benefit and the other gets nothing. Reward: 5, 0",
-      "Defect,Defect": "Both players defect and both get a minimal benefit. Reward: 1, 1",
+      "Cooperate,Cooperate": "Both players cooperate and receive a moderate benefit.",
+      "Cooperate,Defect": "You cooperate but the other defects, you get nothing and the other gets maximum benefit.",
+      "Defect,Cooperate": "You defect while the other cooperates, you get maximum benefit and the other gets nothing.",
+      "Defect,Defect": "Both players defect and both get a minimal benefit.",
     },
   },
 };
@@ -44,13 +44,6 @@ const Index = () => {
             <FaUserFriends /> Game Theory Experiment
           </Text>
           <Text mb={4}>Select your choice for the game scenario: {selectedGame}</Text>
-          <Text mb={4}>Payoff Matrix:</Text>
-          <Text mb={4}>
-            Cooperate: {gameScenarios[selectedGame].outcomes["Cooperate,Cooperate"]} / {gameScenarios[selectedGame].outcomes["Cooperate,Defect"]}
-          </Text>
-          <Text mb={4}>
-            Defect: {gameScenarios[selectedGame].outcomes["Defect,Cooperate"]} / {gameScenarios[selectedGame].outcomes["Defect,Defect"]}
-          </Text>
           <RadioGroup onChange={setChoice} value={choice}>
             <Stack direction="row">
               {gameScenarios[selectedGame].choices.map((c, index) => (
