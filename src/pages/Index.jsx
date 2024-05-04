@@ -44,6 +44,13 @@ const Index = () => {
             <FaUserFriends /> Game Theory Experiment
           </Text>
           <Text mb={4}>Select your choice for the game scenario: {selectedGame}</Text>
+          <Text mb={4}>Payoff Matrix:</Text>
+          <Text mb={4}>
+            Cooperate: {gameScenarios[selectedGame].outcomes["Cooperate,Cooperate"]} / {gameScenarios[selectedGame].outcomes["Cooperate,Defect"]}
+          </Text>
+          <Text mb={4}>
+            Defect: {gameScenarios[selectedGame].outcomes["Defect,Cooperate"]} / {gameScenarios[selectedGame].outcomes["Defect,Defect"]}
+          </Text>
           <RadioGroup onChange={setChoice} value={choice}>
             <Stack direction="row">
               {gameScenarios[selectedGame].choices.map((c, index) => (
