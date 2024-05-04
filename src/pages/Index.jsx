@@ -6,10 +6,10 @@ const gameScenarios = {
   "Prisoner's Dilemma": {
     choices: ["Cooperate", "Defect"],
     outcomes: {
-      "Cooperate,Cooperate": "Both players cooperate and receive a moderate benefit.",
-      "Cooperate,Defect": "You cooperate but the other defects, you get nothing and the other gets maximum benefit.",
-      "Defect,Cooperate": "You defect while the other cooperates, you get maximum benefit and the other gets nothing.",
-      "Defect,Defect": "Both players defect and both get a minimal benefit.",
+      "Cooperate,Cooperate": "Both players cooperate and receive a moderate benefit. Reward: 3, 3",
+      "Cooperate,Defect": "You cooperate but the other defects, you get nothing and the other gets maximum benefit. Reward: 0, 5",
+      "Defect,Cooperate": "You defect while the other cooperates, you get maximum benefit and the other gets nothing. Reward: 5, 0",
+      "Defect,Defect": "Both players defect and both get a minimal benefit. Reward: 1, 1",
     },
   },
 };
